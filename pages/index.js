@@ -1,5 +1,10 @@
-export default function Home() {
+function HomePage() {
   return (
-    <h1>Forró Clapas</h1>
+    <div>
+      <h1>Forró Clapas</h1>
+      <p>Association de Forró de Montpellier</p>
+    </div>
   );
 }
+
+export default HomePage;

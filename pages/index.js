@@ -19,19 +19,29 @@ const Logo = () => (
 );
 
 export default function Home() {
-  return (
-    <div className="max-w-4xl mx-auto p-4">
-      <div className="bg-white rounded-lg shadow-lg">
-        <div className="bg-green-700 text-white rounded-t-lg p-4">
-          <div className="flex items-center gap-3">
-            <Logo />
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold">Forró Clapas</span>
-              <span className="text-sm text-yellow-300">Association de Forró de Montpellier</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+  const [selectedDate, setSelectedDate] = useState(null);
+
+  const events = {
+    '2024-11-15': { 
+      id: 1,
+      type: 'stage', 
+      title: 'Stage Forró avec João et Maria',
+      color: 'bg-red-500',
+      description: 'Stage intensif de Forró',
+      location: 'Studio de danse',
+      time: '14h00 - 17h00',
+      price: '25€'
+    },
+    '2024-11-10': { 
+      type: 'soiree', 
+      title: 'Soirée Pratique',
+      color: 'bg-green-500',
+      description: 'Pratique libre avec DJ Beto',
+      location: 'Salle principale',
+      time: '20h30 - 00h00',
+      price: '5€'
+    }
+  };
+
+  const renderCalendarDays = () => {
+    co
